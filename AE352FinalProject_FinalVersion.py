@@ -124,7 +124,7 @@ def ref_traj(t):
     t_yaw = 6
     t_straight2 = 12
     t_hover2 = 3
-    t_land = 40
+    t_land = 100
     T1 = t_asc
     T2 = T1+t_straight1
     T3 = T2+t_hover1
@@ -222,7 +222,7 @@ def mission3(t, state):
     return {"z_ref":z_ref,"phi_ref":phi_ref,"theta_ref":theta_ref,"psi_ref":psi_ref}
 
 state3 = np.zeros(12)
-total_T = (90)
+total_T = 150
 log3 = run_mission(int(total_T/dt), dt, state3, mission3)
 
 # Goal 1
